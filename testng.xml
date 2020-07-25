@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="softwaretestingmaterial" preserve-order="true" parallel="instances" thread-count="2">
+    <test name="seleniumtest-CHROME">
+        <parameter name="browser" value="Chrome"></parameter>
+        <classes>
+            <!--<class name="test.TestMyAccount"/>
+            <class name="test.TestProduct"/>-->
+            <class name="test.TestProduct">
+                <!--<methods>
+                    <include name="selectProductPOMNavigationTest" />
+                    <include name="selectProductPOMTest" />
+                </methods>-->
+            </class>
+            <class name="test.TestMyAccount">
+                <!--<methods>
+                    <include name="registerMyAccountTest" />
+                    <include name="selectProductPOMTest" />
+                </methods>-->
+            </class>
+        </classes>
+    </test>
+    <!--<test name="seleniumtest-FIREFOX">
+        <parameter name="browser" value="Firefox"></parameter>
+        <classes>
+            <class name="test.TestProduct">
+                <methods>
+                    <include name="selectProductPOMNavigationTest" />
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+</suite>

@@ -1,0 +1,4 @@
+appURL=http://tutorialsninja.com/demo/
+noOfSecondToWait=5
+TestDocDataFileName=TestDoc.xlsx
+TestRegistrationDataFileName=TestRegistrationData.xlsx
