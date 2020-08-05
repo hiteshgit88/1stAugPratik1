@@ -68,7 +68,7 @@ public class TestProduct extends SeleniumConfig
 
     }
 
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void selectProductPOMTest()
     {
         try {
@@ -94,7 +94,7 @@ public class TestProduct extends SeleniumConfig
         }
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void selectProductPOMNavigationTest()
     {
         try {

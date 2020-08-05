@@ -7,22 +7,7 @@ import pom.RegisterationPOM;
 
 public class TestMyAccount extends SeleniumConfig {
 
-    int intNoOfRegistration;
-    int intRegistrationDataPtr;
 
-    public TestMyAccount()
-    {
-        if(currentBrowser.equals(eBrowserType.CHROME))
-        {
-            intNoOfRegistration = eNoOfRegistration.CHROME.getNoOfRegistration();
-            intRegistrationDataPtr = eNoOfRegistration.CHROME.getNoOfRegistration();
-        }
-        else if(currentBrowser.equals(eBrowserType.FIREFOX))
-        {
-            intNoOfRegistration = eNoOfRegistration.FIREFOX.getNoOfRegistration();
-            intRegistrationDataPtr = eNoOfRegistration.FIREFOX.getNoOfRegistration();
-        }
-    }
 
     @Test(priority = 0)
     public void registerMyAccountTest()

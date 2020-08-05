@@ -3,6 +3,7 @@ package pom;
 import config.SeleniumConfig;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.*;
 
 import java.util.ArrayList;
@@ -60,7 +61,9 @@ public class NavigationPOM {
 
             if(_element.getText().substring(0, _element.getText().indexOf(' ')).equalsIgnoreCase(strDesktopSubMenuOption))
             {
-                _element.click();
+                _selConfig._utility.moveToElementAndClick(_selConfig.driver,_element);
+
+                //_element.click();
                 break;
             }
 

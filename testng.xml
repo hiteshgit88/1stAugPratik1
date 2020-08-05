@@ -7,12 +7,12 @@
         <classes>
             <!--<class name="test.TestMyAccount"/>
             <class name="test.TestProduct"/>-->
-            <class name="test.TestProduct">
-                <!--<methods>
+            <!--<class name="test.TestProduct">
+                &lt;!&ndash;<methods>
                     <include name="selectProductPOMNavigationTest" />
                     <include name="selectProductPOMTest" />
-                </methods>-->
-            </class>
+                </methods>&ndash;&gt;
+            </class>-->
             <class name="test.TestMyAccount">
                 <!--<methods>
                     <include name="registerMyAccountTest" />

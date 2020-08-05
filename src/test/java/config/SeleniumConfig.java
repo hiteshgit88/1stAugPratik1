@@ -6,6 +6,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
@@ -27,11 +28,15 @@ public abstract class SeleniumConfig {
     public HashMap<String, String> _hashmapAppMsgProp = new HashMap<>();
     public String strPathToDatasheet;
     public JTable _jTableXL;
+    public Actions _action;
 
     public Utility _utility = new Utility();
     public ExcelHelper _excelhelper = new ExcelHelper();
 
     public SoftAssert _softAssert = new SoftAssert();
+
+    public int intNoOfRegistration;
+    public int intRegistrationDataPtr;
 
     public enum eBrowserType
     {
@@ -167,6 +172,20 @@ public abstract class SeleniumConfig {
     {
         driver.navigate().to(strURL);
         driver.manage().window().maximize();
+    }
+
+    private void setupDataMember()
+    {
+        if(currentBrowser.equals(eBrowserType.CHROME))
+        {
+            intNoOfRegistration = eNoOfRegistration.CHROME.getNoOfRegistration();
+            intRegistrationDataPtr = eNoOfRegistration.CHROME.getNoOfRegistration();
+        }
+        else if(currentBrowser.equals(eBrowserType.FIREFOX))
+        {
+            intNoOfRegistration = eNoOfRegistration.FIREFOX.getNoOfRegistration();
+            intRegistrationDataPtr = eNoOfRegistration.FIREFOX.getNoOfRegistration();
+        }
     }
 
     @AfterMethod
